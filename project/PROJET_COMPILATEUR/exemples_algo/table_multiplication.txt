@@ -1,0 +1,21 @@
+ALGO multiplication
+    VAR
+        ENTIER :nb;
+DEBUT
+// algorithme_pour_calculer_table_de_multiplication_dun_nombre_entier //
+	LIRE(nb);   RETOURE_LIGNE;
+	table_multiplication(nb);
+FIN
+
+PROCEDURE table_multiplication(ENTIER:nb)
+	VAR 
+		ENTIER:mul,inc;
+DEBUTP
+// procedure_qui_trace_la_table //
+	ECRIRE("TABLE MULTIPLICATION ",nb);   RETOURE_LIGNE;
+	POUR inc ALLANT 1 JUSQUA 9 PAS 1 FAIRE
+	    ECRIRE(nb,"__x__",inc,"_egale");
+	    $mul = $nb * $inc;
+	    ECRIRE(mul);   RETOURE_LIGNE;
+	FPOUR
+FINPROCEDURE

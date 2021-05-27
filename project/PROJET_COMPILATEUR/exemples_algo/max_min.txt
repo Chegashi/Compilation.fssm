@@ -1,0 +1,39 @@
+ALGO max_min
+    VAR
+    	ENTIER :ii,nn,som,max,min,tmp;
+        ENTIER :TABLEAU tab[100];
+DEBUT
+// algorithme_pour_trouver_max_et_min_dans_un_tableau_entier //
+	ECRIRE("Donnez_le_nombre_des_element_du_tableau ");TABULATION;
+	LIRE(nn);RETOURE_LIGNE;
+
+// remplissage_du_tableau //
+	$nn=$nn-1;
+	POUR ii ALLANT 0 JUSQUA nn PAS 1 FAIRE
+	    ECRIRE("Donnez_element",ii);   TABULATION;
+	    LIRE(tmp);RETOURE_LIGNE;
+	    $$tab[ii] = tmp;
+	FPOUR
+    $som = 0;
+	$min = $$tab[0];
+	$max = $$tab[0];
+
+// recherche_du_max_et_min_et_calcule_somme //
+	POUR ii ALLANT 0 JUSQUA nn PAS 1 FAIRE
+	    $tmp = $$tab[ii];
+	    $som = $som + $tmp;
+        
+        SI(tmp < min) ALORS
+            $min = tmp;
+            RETOURE_LIGNE;  
+        FSI
+        SI(tmp > max) ALORS
+            $max = tmp;
+            RETOURE_LIGNE;  
+        FSI
+	FPOUR
+	
+	ECRIRE("La_somme_est ",som);RETOURE_LIGNE;
+	ECRIRE("Le_max_est ",max);RETOURE_LIGNE;
+	ECRIRE("Le_min_est ",min);RETOURE_LIGNE;
+FIN

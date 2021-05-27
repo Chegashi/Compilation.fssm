@@ -1,0 +1,59 @@
+ALGO somme_matrice
+    VAR
+    	ENTIER :LL,CC,ii,jj,var,tmp;
+        ENTIER :TABLEAU mat1[30][30],mat2[30][30],somm[30][30];
+DEBUT
+// algorithme_pour_calculer_les_sommes_des_matrices //
+	ECRIRE("Donner_le_nombre_de_lignes");TABULATION;
+	LIRE(LL);RETOURE_LIGNE;
+	ECRIRE("Donner_le_nombre_de_colonnes");TABULATION;
+	LIRE(CC); RETOURE_LIGNE;
+
+// remplissage_matrice1 //
+	ECRIRE("Remplissage_la_matrice_mat1");RETOURE_LIGNE;RETOURE_LIGNE;
+	$ii = 0;
+	$jj = 0;
+	TANTQUE(ii < LL)FAIRE
+		TANTQUE(jj < CC)FAIRE
+			$tmp = $jj + $ii;
+			TABULATION;	ECRIRE("Donner_element");TABULATION;
+			TABULATION;LIRE(var); RETOURE_LIGNE;
+			$$mat1[ii][jj]=var;
+			$jj = $jj + 1;
+		FTANTQUE
+		$jj = 0;
+		$ii = $ii + 1;	
+	FTANTQUE
+
+// remplissage_matrice2 //
+	ECRIRE("Remplissage_la_matrice_mat2");RETOURE_LIGNE;RETOURE_LIGNE;
+	$ii = 0;
+	$jj = 0;
+	TANTQUE(ii < LL)FAIRE
+		TANTQUE(jj < CC)FAIRE
+			TABULATION;ECRIRE("Donner_element");TABULATION;
+			TABULATION;LIRE(var); RETOURE_LIGNE;
+			$$mat2[ii][jj]=var;
+			$jj = $jj + 1;
+		FTANTQUE
+		$jj = 0;
+		$ii = $ii + 1;	
+	FTANTQUE
+// calcule_somme_des_deux_matrices //
+	$ii = 0;
+	$jj = 0;
+	TABULATION;	ECRIRE("SOMME");RETOURE_LIGNE;RETOURE_LIGNE;
+	TANTQUE(ii < LL)FAIRE
+		TANTQUE(jj < CC)FAIRE
+			$$somm[ii][jj] = $$mat1[ii][jj]+$$mat2[ii][jj];
+			TABULATION;
+			$var = $$somm[ii][jj];
+			ECRIRE(var);
+			$jj = $jj + 1;
+		FTANTQUE
+        RETOURE_LIGNE;
+		$jj = 0;
+		$ii = $ii + 1;	
+	FTANTQUE
+
+FIN

@@ -1,0 +1,25 @@
+ALGO calcul_pgcd
+	VAR
+		ENTIER : a1,a2,res;
+DEBUT
+// algorithme_pour_calculer_le_pgcd_de_2_nombre_entier //
+	ECRIRE("Donnez_le_premier_nombre");   TABULATION;
+	LIRE(a1);   RETOURE_LIGNE;
+	ECRIRE("Donnez_le_deuxiem_nombre");   TABULATION;
+	LIRE(a2);   RETOURE_LIGNE;
+	$res = calc_pgcd(a1,a2);
+	ECRIRE("Le_PGCD ",res);
+FIN
+
+ENTIER:FONCTION calc_pgcd(ENTIER:a1,ENTIER:a2)
+    VAR
+        ENTIER : tmp;
+DEBUTF
+// fonction_qui_calcule_le_pgcd //
+    TANTQUE($a2 <> 0) FAIRE
+        $tmp = $a1 MOD $a2;
+        $a1 = a2;
+        $a2 = tmp;
+    FTANTQUE
+    RETOURNE(a1);
+FINFONCTION

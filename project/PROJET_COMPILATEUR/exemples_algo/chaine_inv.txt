@@ -1,0 +1,29 @@
+ALGO inverse_chaine
+    VAR
+        ENTIER   :ii,ll;
+        CHAINE   :var;
+        CHAINE   :TABLEAU str[100]; 
+DEBUT
+
+//  VEUILLEZ_TAPEZ_LA_LONGUEUR_DE_LA_CHAINE_PUIS_TAPEZ_LA_CHAINE //
+
+// algorithme_pour_inverser_une_chaine_de_caractere //
+	$ii = 0;
+	LIRE(ll);RETOURE_LIGNE;
+
+// remplissage_tableau //
+	TANTQUE(ii <= ll)FAIRE
+		LIRE(var);
+		$$str[ii]=var;
+		$ii = $ii + 1;
+	FTANTQUE
+
+// inversemnet_chaine //
+    $ii = ll;
+	ECRIRE("Chaine inverser");TABULATION;
+	TANTQUE($ii >= 0)FAIRE
+		$var = $$str[ii];
+		ECRIRE(var);
+		$ii = $ii - 1;
+	FTANTQUE
+FIN

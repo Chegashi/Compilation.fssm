@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Online Compiler</title>
+	<script src="./socket.io.js"></script>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.7/ace.js" ></script>
+</head>
+<body>
+	<div class="app">
+		<h1><strong>ALgo</strong> Compiler <small> <sub>v1.0</sub></small></h1>
+
+		<div class="topnav" id="myTopnav">
+			<h4>CODE</h4>
+			<button class="button" id="compile-btn"><span>Run</span> </button>
+			<h4>RESULT</h4>
+		  </div>
+
+		<section class="container">
+		<div class="edit-area">
+			
+			<div class="coding-area" id="mainCode" >ALGO exemple
+	VAR
+		ENTIER : tmp;
+DEBUT
+
+   // CLIQUER_SUR_RUN_POUR_EXECUTER_LE_PROGRAMME //
+
+	POUR tmp ALLANT 1 JUSQUA 5 PAS 1 FAIRE
+		ECRIRE("HELLO WORLD");
+		RETOURE_LIGNE;
+	FPOUR
+FIN</div>
+		</div>
+
+		<div class="output" id="output-area"></div>
+
+	</section>
+		
+		<div class="form-control nexto color dark">
+			<input type="text" id="code-input" class="input-text" disabled/><button id="send-input" class="btn color dark" disabled> Input</button>
+		</div>
+	</div>
+	<footer>
+		<div style='margin: 1rem;font-family: "Gill Sans", sans-serif;text-align: center;font-size: larger;'>Created by</div>
+		<div style='text-align: center;'>
+			<span class="sp">LABIAD Salah Eddine</span>
+			<span class="sp">ZIRY Asmaa</span>
+			<span class="sp">OUASSINE Younes</span>
+			<span class="sp">HADDANI Abdelhakim</span>
+
+		</div>
+
+	</footer>
+	<script>
+		var editor = ace.edit("mainCode");
+	    editor.setTheme("ace/theme/dawn");
+	    editor.session.setMode("ace/mode/toml");
+	</script>
+	<script src="homepage.js"></script>
+</body>
+</html>
