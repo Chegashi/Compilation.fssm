@@ -1,0 +1,5 @@
+{
+var variable;
+var b,c;
+a=4 ;
+}

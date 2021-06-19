@@ -1,0 +1,6 @@
+Debut
+ma_Varaibale=12; b=2; 
+si(var1!=b) alors{
+    var1 = b;
+}
+fin

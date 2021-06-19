@@ -1,0 +1,6 @@
+debut
+Var = 1;
+c = Var;
+a=4 ;
+pour i allant_de 0 A 10;
+fin
