@@ -1,0 +1,10 @@
+Algorithme somme
+
+var a,b,c : Entier;
+
+debut
+a=0 ;
+b=5;
+c=b+a;
+Ecrire(c);
+fin
